@@ -1,22 +1,4 @@
-//////////////////////////////////////////////////////////////////////////////////
-// Universidad: Instituto Tecnologico de Costa Rica
-// Estudiante: Martin Barquero
-// 
-// Create Date:    17:02:37 08/12/2016 
-// Design Name: 
-// Module Name:    ControladorVGA_tb 
-// Project Name:   Controlador de VGA
-// Target Devices: Nexys2(Spartan 3E)
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
+
 `timescale 10ns / 1ps
 module ControladorVGA_tb();
 
@@ -58,7 +40,7 @@ begin
 	@(negedge rst); //espera al reinicio
 	
 	@(negedge vsync);//espera a que no se este escribiendo en pantalla
-	@(negedge clk); //espera al eje negativo del relog para proporcionar una señal estable de  RBG_in
+	@(negedge clk); //espera al eje negativo del relog para proporcionar una seÃ±al estable de  RBG_in
 	{R,G,B} <=  3'b001; //se prueba el siguiente valor
 	
 	@(negedge vsync);
